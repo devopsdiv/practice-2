@@ -1,0 +1,5 @@
+  323  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+  324  apt-get install curl
+  325  sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+  326  apt-get install kubeadm kubelet kubectl
+  327  kubeadm version
