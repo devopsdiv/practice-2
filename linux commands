@@ -1,0 +1,306 @@
+ 1  clear
+    2  apt-get update
+    3  clear
+    4  docker ps
+    5  clear
+    6  apt-get install     ca-certificates     curl     gnupg     lsb-release
+    7  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    8  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    9    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   10  apt-get update
+   11  cler
+   12  clear
+   13  apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   14  docker ps
+   15  clear
+   16  docker pull ubuntu
+   17  docker images
+   18  docker run -it -d --name conatiner_1 ubuntu /bin/bash
+   19  docker ps
+   20  clear
+   21  docker pull registry
+   22  docker image
+   23  docker images
+   24  clear
+   25  docker run -d -p 5000:5000 registry
+   26  docker ps
+   27  docker tag  ubuntu  localhost:5000/  ubuntu:latest
+   28  docker tag  registry loacalhost:5000/ registry
+   29  docker tag  registry loacalhost:5000/registry
+   30  docker ps
+   31  docker images
+   32  docker push loacalhost:5000/registry
+   33  clear
+   34  docker images
+   35  docker push loacalhost:5000/registry
+   36  docker tag ubuntu loacalhost:5000/ubuntu:latest
+   37  docker images
+   38  docker push loacalhost:5000/ubuntu
+   39  docker push loacalhost:5000/ubuntu:latest
+   40  clear
+   41  docker images
+   42  docker rmi loacalhost:5000/ubuntu loacalhost:5000/registry registry
+   43  docker ps
+   44  docker stop ed0bd8e5ed73
+   45  docker rm ed0bd8e5ed73
+   46  docker images
+   47  docker rmi -f  773dbf02e42e
+   48  clear
+   49  docker images
+   50  docker pull registry
+   51  docker run -d -p 5000:5000 registry
+   52  docker ps
+   53  docker images
+   54  docker tag ubuntu localhost:5000/ubuntu:latest
+   55  docker images
+   56  docker localhost:5000/ubuntu
+   57  docker push localhost:5000/ubuntu
+   58  docker search
+   59  clear
+   60  docker ps
+   61  docker run -it -d -p 80:80 --name divyam ubuntu /bin/bash
+   62  docker ps
+   63  docker exec 1a29a5af717c /bin/bash
+   64  docker exec -it 1a29a5af717c /bin/bash
+   65  clear
+   66  docker ps
+   67  docker pull docker-1
+   68  exit
+   69  clear
+   70  docker ps
+   71  docker images
+   72  docker pull nginx
+   73  docker images
+   74  clear
+   75  docker images
+   76  apt-get install nano
+   77  apt-get install vim
+   78  clear
+   79  docker images
+   80  vim dockerfiles
+   81  clear
+   82  docker ps
+   83  docker images
+   84  vim Dockerfile
+   85  clear
+   86  mkdir divyam
+   87  cd divyam
+   88  vim Dockerfile
+   89  docker build -t divyam
+   90  docker build -t divyam .
+   91  vim Dockerfile
+   92  exit
+   93  clear
+   94  mkdir div
+   95  cd div
+   96  vim Dockerfile
+   97  $ docker build -t Darwin .
+   98  docker build -t Darwin .
+   99  docker build -t divyam2 .
+  100  docker dun divyam2
+  101  docker run divyam2
+  102  docker ps
+  103  docker images
+  104  docker run centos
+  105  docker run centos hostname
+  106  vim Dockerfile
+  107  docker build -t divyam3
+  108  docker build -t centos .
+  109  docker run centos
+  110  docker run centos hostname
+  111  clear
+  112  exit
+  113  docker ps
+  114  docker images
+  115  clear
+  116  docker ps
+  117  docker images
+  118  docker volume ls
+  119  docker volume create doc1
+  120  docker volume
+  121  docker volume ls
+  122  clear
+  123  docker volume ls
+  124  docker run -it -d --mount source=doc1,destination= /tmp/ubuntu /bin/bash
+  125  docker run -it -d --mount source=doc1,destination=/tmp/ ubuntu /bin/bash
+  126  docker exec -it 407a2 /bin/bash
+  127  cd -
+  128  cd - /var/lib/docker/volumes/doc1/_data
+  129  cd - /var/lib/docker/volumes/doc1
+  130  cd  /var/lib/docker/volumes/doc1/_data
+  131  ls -l
+  132  cd ..
+  133  cd
+  134  sudo su - root
+  135  clear
+  136  docker ps
+  137  docker images
+  138  clear
+  139  mkdir divyam2
+  140  ls
+  141  clear
+  142  docker run -it -d -v divyam2:/tmp ubuntu /bin/bash
+  143  docker exec -it 6cab /bin/bash
+  144  cd /divyam2
+  145  cd divyam2/
+  146  ls -l
+  147  cd
+  148  mkdir test
+  149  docker run -it -d --mount source=data,destination=/tmp/ ubuntu /bin/bash
+  150  docker exec -it 7ddd /bin/bash
+  151  cd data
+  152  ls -l
+  153  cd
+  154  cd data/
+  155  ls
+  156  ls -l
+  157  clear
+  158  cd
+  159  clear
+  160  docker run -it -d --name new1 ubuntu
+  161  docker ps
+  162  docker exec -it new1 /bin/bash
+  163  docker exec -it new1 /bin/bash
+  164  docker inspect
+  165  docker inspect new1
+  166  clear
+  167  docker ps
+  168  docker run -it --name divyam --link new1 -d ubuntu /bin/bash
+  169  docker run -it --name new2 --link new1 -d ubuntu /bin/bash
+  170  docker ps
+  171  docker exec -it 815c /bin/bash
+  172  docker exec -it new2 /bin/bash
+  173  clear
+  174  docker ps
+  175  docker exec -it new2 /bin/bash
+  176  docker ps -a
+  177  docker ps
+  178  clear
+  179  docker ps
+  180  docker imges
+  181  docker omages
+  182  'docker images
+  183  docker images
+  184  clear
+  185  history
+  186  cat /etc/hosts
+  187  clear
+  188  cat Dockerfile
+  189  exit
+  190  clear
+  191  docker ps
+  192  docker images
+  193  clear
+  194  apt-get update
+  195  clear
+  196  docker ps
+  197  clear
+  198  vim Dockerfile
+  199  docker-compose
+  200  apt install docker-compose
+  201  docker-compose
+  202  uname -s
+  203  uname -m
+  204  clear
+  205  vim Docker-compose.yml
+  206  docker-compose up
+  207  docker-compose.yml up
+  208  Docker-compose up
+  209  docker-compose
+  210  docker-compose up
+  211  vim docker-compose.yml
+  212  vim Docker-compose.yml
+  213  vim docker-compose.yml
+  214  docker-compose up
+  215  docker-compose up -d
+  216  clear
+  217  ifconfig
+  218  apt-get install ifconfig
+  219  apt-get update
+  220  apt-get install ifconfig
+  221  ifconfig
+  222  apt install net-tools
+  223  ifconfig
+  224  clear
+  225  ifconfig
+  226  clear
+  227  ifconfig /all
+  228  exit
+  229  clear
+  230  ip addr
+  231  clear
+  232  if config
+  233  ifconfig
+  234  clear
+  235  ifconfig
+  236  clear
+  237  docker swarm init --advertise -addr=172.31.19.208
+  238  docker swarm init --help
+  239  docker swarm init --advertise-addr= 172.31.19.208
+  240  docker node ls
+  241  docker service scale web=8
+  242  docker service scale web= 8
+  243  'docker service scale --help
+  244  docker service scale --help
+  245  docker service scale = 8
+  246  exit
+  247  clear
+  248  pwd
+  249  cd
+  250  pwd
+  251  cd ..
+  252  clear
+  253  exit
+  254  ls
+  255  whoami
+  256  date
+  257  man
+  258  history
+  259  clear
+  260  touch 1.txt
+  261  nano 1.txt
+  262  touch 2.txt
+  263  nano 2.txt
+  264  ls
+  265  cat 1.txt
+  266  cat 2.txt
+  267  cp 1.txt 2.txt
+  268  ls
+  269  cat 2.txt
+  270  cat 1.txt
+  271  mv 1.txt 2.txt
+  272  ls
+  273  cat 2.txt
+  274  clear
+  275  alias
+  276  alias c="clear"
+  277  c
+  278  who
+  279  w
+  280  who
+  281  man grep
+  282  c
+  283  x=10
+  284  echo $x
+  285  y=90
+  286  echo $y
+  287  echo $((x+y))
+  288  ls
+  289  echo *
+  290  echo 2.txt
+  291  ls 2.txt
+  292  cat 2.txt
+  293  x=84
+  294  echo $x
+  295  bash
+  296  echo $x
+  297  export x
+  298  echo $x
+  299  bsh
+  300  bash
+  301  c
+  302  expr --version
+  303  man expr
+  304  expr 78953 + 4637826 + 466252
+  305  expr 5467 /* 7625
+  306  expr 46372 \* 483722
